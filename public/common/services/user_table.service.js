@@ -7,6 +7,16 @@ angular.module('services.user_table', [])
         var userList;
         var userFactory = userTableFactory;
 
+        var checkboxCounter = 0;
+
+        var checkboxCount = function (item) {
+            if (item.selected) {
+                checkboxCounter++;
+            } else {
+                checkboxCounter--
+            }
+        };
+
         var resolvePromise = function (data) {
             userList = data;
             return userList;
@@ -49,8 +59,15 @@ angular.module('services.user_table', [])
             getUser: getUser,
             deleteUser: deleteUser,
             editUser: editUser,
+            checkboxCount: checkboxCount,
             get userList() {
                 return userList;
+            },
+            get checkboxCounter() {
+                return checkboxCounter;
+            },
+            set checkboxCounter(num) {
+                checkboxCounter = num
             }
         };
     }]);

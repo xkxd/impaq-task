@@ -1,45 +1,40 @@
 'use strict';
 
 angular.module('user_table.ctrl', [])
-    .controller('TableCtrl', ['userTableFactory', 'userTableService', '$scope',
-        function (userTableFactory, userTableService, $scope) {
+    .controller('TableCtrl', ['userTableService',
+        function (userTableService) {
             var that = this;
 
             this.userId = '';
 
-            this.multipleSelected = 0;
-
-            this.change = function (item, user) {
-                if (item.selected) {
-                    that.multipleSelected++;
-                } else {
-                    that.multipleSelected--
-                }
-            };
+            this.userService = userTableService;
 
             this.displayUsers = function () {
                 that.userId = '';
-                that.userList = userTableService.userList;
+                that.userList = that.userService.userList;
                 return that.userList;
             };
 
             this.getList = function () {
-                return userTableService.getList()
+                return that.userService.getList()
                     .then(this.displayUsers);
             };
 
             this.getUserById = function (id) {
-                userTableService.getUser(id)
+                if (id === '') {
+                    return console.log('Error, enter id!')
+                }
+                return that.userService.getUser(id)
                     .then(this.displayUsers);
             };
 
             this.deleteUser = function (user) {
-                userTableService.deleteUser(user)
+                return that.userService.deleteUser(user)
                     .then(this.displayUsers);
             };
 
             this.editUser = function (user) {
-                userTableService.editUser(user)
+                return that.userService.editUser(user)
                     .then(this.displayUsers);
             };
         }]);

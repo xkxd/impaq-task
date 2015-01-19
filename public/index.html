@@ -16,17 +16,16 @@
 </head>
 
 <body ng-app="impaqApp">
-
 <section class="container" ng-controller="TableCtrl as TableCtrl">
-    <div class="table-header">
-        User Table
-    </div>
-    <button class="btn" ng-click="TableCtrl.getList()">GET ALL USERS</button>
     <div class="btn-wrapper">
-        <input type="text" ng-model="TableCtrl.userId"/>
-        <button class="btn" ng-click="TableCtrl.getUserById(TableCtrl.userId)">Get user by ID</button>
+        <button class="btn" ng-click="TableCtrl.getList()">Get all users</button>
+        <div>
+            <input type="number" ng-model="TableCtrl.userId"/>
+            <button class="btn" ng-click="TableCtrl.getUserById(TableCtrl.userId)">Get user by ID</button>
+            <small>range: 0-11</small>
+        </div>
     </div>
-    <table>
+    <table ng-hide="!TableCtrl.userList.length">
         <tr>
             <th></th>
             <th>ID</th>
@@ -35,11 +34,13 @@
             <th>Date of birth</th>
             <th>Mobile number</th>
             <th>Address</th>
-            <th ng-show="TableCtrl.multipleSelected > 1"><button>Edit multiple</button></th>
+            <th ng-show="TableCtrl.userService.checkboxCounter > 1">
+                <button>Edit multiple</button>
+            </th>
         </tr>
         <tr ng-repeat="user in TableCtrl.userList | orderObjectBy: 'id'">
             <td>
-                <input ng-model="item.selected" ng-change="TableCtrl.change(item, user)" type="checkbox"/>
+                <input ng-model="item.selected" ng-change="TableCtrl.userService.checkboxCount(item)" type="checkbox"/>
             </td>
             <td>
                 {{user.id}}

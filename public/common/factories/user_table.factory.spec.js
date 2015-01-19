@@ -1,17 +1,15 @@
 describe('UserTableFactory', function () {
 
-    var $rootScope;
     var $httpBackend;
     var userFactory;
     var userService;
     var mockData;
 
     beforeEach(module('impaqApp'));
-    beforeEach(inject(function ($injector) {
-        $httpBackend = $injector.get('$httpBackend');
-        $rootScope = $injector.get('$rootScope');
-        userFactory = $injector.get('userTableFactory');
-        userService = $injector.get('userTableService');
+    beforeEach(inject(function (_$httpBackend_, _userTableService_, _userTableFactory_) {
+        $httpBackend = _$httpBackend_;
+        userService = _userTableService_;
+        userFactory = _userTableFactory_;
         mockData = [
             {
                 "_id": "54b9286888f15464ae730c29",

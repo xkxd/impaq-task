@@ -1,1 +1,26 @@
-@import "user_table/_user_table";
+.container {
+  padding: 20px 40px;
+}
+
+.btn {
+  display: block;
+  height: 40px;
+  margin: 10px 20px;
+  width: 130px;
+}
+
+.btn-wrapper {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+td, th {
+  min-width: 100px;
+  max-width: 200px;
+  padding: 10px;
+}
+
+tr:nth-of-type(even) {
+  background: #ccc;
+}

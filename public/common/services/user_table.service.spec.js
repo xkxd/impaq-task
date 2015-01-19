@@ -1,22 +1,13 @@
 describe('UserTableService', function () {
 
-    var $rootScope;
-    var $httpBackend;
     var userFactory;
-    var userService;
+    var scope;
 
     beforeEach(module('impaqApp'));
 
-    beforeEach(inject(function ($injector) {
-        $httpBackend = $injector.get('$httpBackend');
-        $rootScope = $injector.get('$rootScope');
-        userService = $injector.get('userTableService');
-        userFactory = $injector.get('userTableFactory');
-    }));
-
-    it('should I kill myself?', inject(function () {
-
-
+    beforeEach(inject(function ($rootScope, _userTableFactory_) {
+        scope = $rootScope.$new();
+        userFactory = _userTableFactory_;
     }));
 
 
