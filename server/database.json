@@ -1,0 +1,98 @@
+[
+    {
+        "id": 0,
+        "name": "Hancock",
+        "surname": "Huff",
+        "birthDate": "19-03-1978",
+        "phone": "+1 (821) 447-2543",
+        "address": "555 Kent Street, Sussex, Missouri, 5812"
+    },
+    {
+        "id": 1,
+        "name": "Muriel",
+        "surname": "Michael",
+        "birthDate": "22-01-1970",
+        "phone": "+1 (998) 456-2290",
+        "address": "472 Auburn Place, Bayview, Oregon, 2311"
+    },
+    {
+        "id": 2,
+        "name": "Juliana",
+        "surname": "Hatfield",
+        "birthDate": "25-03-1980",
+        "phone": "+1 (886) 535-2730",
+        "address": "204 Tompkins Avenue, Calpine, New York, 3811"
+    },
+    {
+        "id": 3,
+        "name": "Dale",
+        "surname": "Owens",
+        "birthDate": "10-04-1983",
+        "phone": "+1 (962) 430-3698",
+        "address": "821 Plymouth Street, Beechmont, Florida, 2740"
+    },
+    {
+        "id": 4,
+        "name": "Reba",
+        "surname": "Bond",
+        "birthDate": "18-12-1977",
+        "phone": "+1 (933) 592-2767",
+        "address": "952 Schaefer Street, Stewartville, American Samoa, 9639"
+    },
+    {
+        "id": 5,
+        "name": "Miranda",
+        "surname": "Reeves",
+        "birthDate": "18-08-1972",
+        "phone": "+1 (925) 430-2907",
+        "address": "259 Leonard Street, Boomer, Kansas, 8680"
+    },
+    {
+        "id": 6,
+        "name": "Maryann",
+        "surname": "Carrillo",
+        "birthDate": "11-03-1982",
+        "phone": "+1 (960) 428-3123",
+        "address": "678 Elmwood Avenue, Tilden, Iowa, 3205"
+    },
+    {
+        "id": 7,
+        "name": "Fisher",
+        "surname": "Turner",
+        "birthDate": "12-02-1982",
+        "phone": "+1 (840) 480-2751",
+        "address": "173 Surf Avenue, Devon, Utah, 9948"
+    },
+    {
+        "id": 8,
+        "name": "Nicholson",
+        "surname": "Blackburn",
+        "birthDate": "19-11-1971",
+        "phone": "+1 (930) 523-2535",
+        "address": "853 Stryker Court, Brantleyville, Oklahoma, 7187"
+    },
+    {
+        "id": 9,
+        "name": "Margo",
+        "surname": "Miranda",
+        "birthDate": "06-08-1984",
+        "phone": "+1 (877) 455-2512",
+        "address": "809 Devoe Street, Eagleville, Guam, 3196"
+    },
+    {
+        "id": 10,
+        "name": "Audra",
+        "surname": "Mcgowan",
+        "birthDate": "15-02-1973",
+        "phone": "+1 (948) 562-3126",
+        "address": "592 Underhill Avenue, Hardyville, Virgin Islands, 499"
+    },
+    {
+        "id": 11,
+        "name": "Annmarie",
+        "surname": "Santos",
+        "birthDate": "27-04-1982",
+        "phone": "+1 (976) 556-3082",
+        "address": "717 Narrows Avenue, Suitland, New Hampshire, 9087"
+    }
+]
